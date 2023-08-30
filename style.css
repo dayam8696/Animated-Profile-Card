@@ -1,32 +1,42 @@
+/* Importing Google Font 'Poppins' with different weights */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
-*{
+/* Global styling */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.container{
+
+/* Container styling */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: #1b1f29;
+    background: #331D2C;
 }
-.card{
+
+/* Profile card styling */
+.card {
     position: relative;
     width: 400px;
     height: 90px;
-    background: #f66335;
+    background: #BEADFA;
     border-radius: 20px;
     transition: 0.5s ease-in-out;
     filter: drop-shadow(-20px 20px 40px #f6633544);
 }
-.card.active{
+
+/* Active card styling */
+.card.active {
     height: 450px;
 }
-.toggle{
+
+/* Toggle button styling */
+.toggle {
     position: absolute;
     cursor: pointer;
     bottom: -60px;
@@ -34,7 +44,7 @@
     transform: translate(-50%);
     width: 70px;
     height: 60px;
-    background-color: #f66335;
+    background-color: #974EC3;
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
     display: flex;
@@ -42,38 +52,43 @@
     justify-content: center;
     font-size: 30px;
 }
-.toggle::before{
+
+.toggle::before,
+.toggle::after {
     content: '';
     position: absolute;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    box-shadow: 11px -10px 0 10px #974EC3, -11px -10px 0 10px #974EC3;
+}
+
+.toggle::before {
     left: -34px;
-    width: 35px;
-    height: 35px;
-    background: transparent;
     border-top-right-radius: 35px;
-    box-shadow: 11px -10px 0 10px #f66335;
 }
-.toggle::after{
-    content: '';
-    position: absolute;
+
+.toggle::after {
     right: -34px;
-    width: 35px;
-    height: 35px;
-    background: transparent;
     border-top-left-radius: 35px;
-    box-shadow: -11px -10px 0 10px #f66335;
 }
-.card .toggle span{
+
+.card .toggle span {
     transition: 0.5s ease-in-out;
 }
-.card.active .toggle span{
+
+.card.active .toggle span {
     transform: rotate(180deg);
 }
-.inner-box{
+
+/* Inner box styling */
+.inner-box {
     position: absolute;
     inset: 0;
     overflow: hidden;
 }
-.inner-box .content{
+
+.inner-box .content {
     position: relative;
     padding: 20px;
     text-align: center;
@@ -83,19 +98,23 @@
     justify-content: center;
     align-items: center;
 }
-.inner-box .content h2{
+
+.inner-box .content h2 {
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1em;
 }
-.inner-box .content h2 span{
+
+.inner-box .content h2 span {
     font-size: 0.75em;
     font-weight: 400;
     text-transform: initial;
 }
-.img{
+
+/* Profile image styling */
+.img {
     position: relative;
     width: 250px;
     height: 250px;
@@ -104,7 +123,8 @@
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
     border: 5px solid #fff;
 }
-.img img{
+
+.img img {
     position: absolute;
     top: 0;
     left: 0;
@@ -112,10 +132,13 @@
     height: 100%;
     object-fit: cover;
 }
-.content .links{
+
+/* Links section styling */
+.content .links {
     margin-top: 40px;
 }
-.content a{
+
+.content a {
     position: relative;
     padding: 10px 30px;
     text-decoration: none;
@@ -128,10 +151,14 @@
     transition: 0.5s;
     cursor: pointer;
 }
-.content a:first-child{
+
+/* First link gradient background */
+.content a:first-child {
     background-image: linear-gradient(45deg, #df4881, #c430d7);
     margin-right: 10px;
 }
-.content a:hover{
+
+/* Hover effect */
+.content a:hover {
     border-top-right-radius: 30px;
 }
